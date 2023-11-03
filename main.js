@@ -18,7 +18,6 @@ const empateComparacion = (usuarioEleccion, numeroAlAzar) => {
   } else if (usuarioEleccion === "tijera" && numeroAlAzar === 3) {
     alert(`Empate! La maquina tambien eligio ${eleccionMaquina(numeroAlAzar)}`);
   }
-  return;
 };
 /* Compara la eleccion del usuario y la de la maquina para saber quien es el ganador */
 const ganadorComparacion = (usuarioEleccion, numeroAlAzar) => {
@@ -32,7 +31,6 @@ const ganadorComparacion = (usuarioEleccion, numeroAlAzar) => {
     alert(`Haz ganado! La maquina eligio ${eleccionMaquina(numeroAlAzar)}`);
     v++;
   }
-  return;
 };
 /* Compara la eleccion del usuario y la de la maquina para saber quien es el perdedor */
 const perdedorComparacion = (usuarioEleccion, numeroAlAzar) => {
@@ -46,7 +44,6 @@ const perdedorComparacion = (usuarioEleccion, numeroAlAzar) => {
     alert(`Haz perdido! La maquina eligio ${eleccionMaquina(numeroAlAzar)}`);
     l++;
   }
-  return;
 };
 /* Pasa de numero a piedra, papel o tijera, para poder mostrar al usuario que eligio la maquina y no mostrar un numero */
 const eleccionMaquina = (numeroAlAzar) => {
