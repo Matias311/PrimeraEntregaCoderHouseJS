@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piedra, papel y tijera</title>
-</head>
-<body>
-    <script src="./main.js"></script>    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="titulos">
+        <div>
+          <h1>Veces ganadas</h1>
+          <p id="numeroVecesGanadas"></p>
+        </div>
+        <div>
+          <h1>Veces perdidas</h1>
+          <p id="numeroVecesPerdidas"></p>
+        </div>
+      </section>
+      <section class="eleccion">
+        <div class="user">
+          <button id="piedra">Piedra</button>
+          <button id="papel">Papel</button>
+          <button id="tijera">Tijera</button>
+        </div>
+        <div class="maquina">
+          <button value="piedra" id="maquinaEleccion"></button>
+        </div>
+      </section>
+      <section class="victoriaperdida">
+        <h1 id="titulo"></h1>
+      </section>
+    </main>
+    <!-- Link archivo js -->
+    <script src="./index.js"></script>
+  </body>
 </html>
