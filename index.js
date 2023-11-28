@@ -7,6 +7,7 @@ const piedra = document.querySelector("#piedra");
 const papel = document.querySelector("#papel");
 const tijera = document.querySelector("#tijera");
 const user = document.querySelector(".user");
+const botonesUsuario = document.querySelectorAll(".user button");
 const arr = [];
 let v = 1;
 let d = 1;
@@ -67,20 +68,10 @@ function contador(usuario, maquina) {
   }
 }
 
-/* Click de usuario piedra */
-piedra.addEventListener("click", (e) => {
-  const usuarioPiedra = piedra.textContent;
-  comparar(usuarioPiedra, numeroAlAzar());
-});
-
-/* Click de usuario papel */
-papel.addEventListener("click", (e) => {
-  const usuarioPapel = papel.textContent;
-  comparar(usuarioPapel, numeroAlAzar());
-});
-
-/* Click de usuario tijera */
-tijera.addEventListener("click", (e) => {
-  const usuarioTijera = tijera.textContent;
-  comparar(usuarioTijera, numeroAlAzar());
+botonesUsuario.forEach((element) => {
+  element.addEventListener("click", () => {
+    console.log(element.textContent);
+    const eleccionUsuario = element.textContent;
+    comparar(eleccionUsuario, numeroAlAzar());
+  });
 });
