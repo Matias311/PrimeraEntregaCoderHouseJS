@@ -3,33 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Piedra, papel y tijera</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Piedra, Papel y Tijera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <main>
-      <section class="titulos">
-        <div>
-          <h1>Veces ganadas</h1>
-          <p id="numeroVecesGanadas"></p>
-        </div>
-        <div>
-          <h1>Veces perdidas</h1>
-          <p id="numeroVecesPerdidas"></p>
+    <main
+      class="w-screen h-screen flex justify-evenly items-center bg-gray-100"
+    >
+      <section
+        id="usuario"
+        class="flex flex-col justify-center items-center gap-2"
+      >
+        <h1>Veces ganadas</h1>
+        <p id="numeroVecesGanadas">0</p>
+        <div id="usuario-btn" class="gap-2 flex">
+          <button
+            id="usuariobtn"
+            class="border rounded-full border-black w-14 h-14 text-sm hover:border-green-400 hover:bg-green-100 duration-400 transition-all"
+            value="Piedra"
+          >
+            🪨
+          </button>
+          <button
+            id="usuariobtn"
+            class="border rounded-full border-black w-14 h-14 text-sm hover:border-green-400 hover:bg-green-100 duration-400 transition-all"
+            value="Papel"
+          >
+            🧻
+          </button>
+          <button
+            id="usuariobtn"
+            class="border rounded-full border-black w-14 h-14 text-sm hover:border-green-400 hover:bg-green-100 duration-400 transition-all"
+            value="Tijera"
+          >
+            ✂️
+          </button>
         </div>
       </section>
-      <section class="eleccion">
-        <div class="user">
-          <button id="piedra">Piedra</button>
-          <button id="papel">Papel</button>
-          <button id="tijera">Tijera</button>
-        </div>
-        <div class="maquina">
-          <button value="piedra" id="maquinaEleccion"></button>
-        </div>
+      <section
+        id="title-victorias-derrotas"
+        class="flex flex-col items-center justify-center gap-2"
+      >
+        <h1 id="titulo" class="text-base">
+          Haz ganado la maquina eligio piedra
+        </h1>
+        <button class="border w-36 rounded-xl border-black" id="btn-reset">
+          Reset
+        </button>
       </section>
-      <section class="victoriaperdida">
-        <h1 id="titulo"></h1>
+      <section
+        id="maquina"
+        class="flex flex-col justify-center items-center gap-2"
+      >
+        <h1>Veces perdidas</h1>
+        <p id="numeroVecesPerdidas">0</p>
+        <button
+          value="piedra"
+          id="maquinaEleccion"
+          class="border rounded-full border-red-600 w-14 h-14 text-sm bg-red-100"
+          disabled
+        >
+          🪨
+        </button>
       </section>
     </main>
     <!-- Link archivo js -->
